@@ -9,7 +9,11 @@
 import UIKit
 import Alamofire
 
-final class CommentsAdapter {
+protocol CommentsInterface {
+    func getComments(ownerId: Int, postId: Int, completion: @escaping ([VkComment]) -> Void)
+}
+
+final class CommentsAdapter: CommentsInterface {
     
     func getComments(ownerId: Int, postId: Int, completion: @escaping ([VkComment]) -> Void) {
             //delegate: VkApiFeedsDelegate) {
@@ -26,7 +30,7 @@ final class CommentsAdapter {
                 "owner_id":"\(ownerId)",
                 "post_id":"\(postId)"
             ]
-            
+
             Alamofire.request(fullRow, method: .get, parameters: params)
                 .responseJSON(queue: DispatchQueue.global(qos: .userInteractive)) { response in
                     print(response.result)

@@ -14,7 +14,7 @@ class NewsInfoViewController: UIViewController {
 
     var feed = VkFeed()
     var comments = [VkComment]()
-    private let commentsService = CommentsAdapter()
+    private let commentsService = CommentsAdapterProxy(comments: CommentsAdapter())
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -64,6 +64,11 @@
 		F42785F02496399400B35290 /* NewsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42785EF2496399400B35290 /* NewsViewModelFactory.swift */; };
 		F4507DB1249523E700DABAEA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507DB0249523E700DABAEA /* WebKit.framework */; };
 		F4507DB62495357200DABAEA /* CommentsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4507DB52495357200DABAEA /* CommentsAdapter.swift */; };
+		F4C99ADB24A2759A00C7686D /* LogAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C99ADA24A2759A00C7686D /* LogAction.swift */; };
+		F4C99ADD24A2790300C7686D /* LogCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C99ADC24A2790300C7686D /* LogCommand.swift */; };
+		F4C99ADF24A27AFB00C7686D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C99ADE24A27AFB00C7686D /* Logger.swift */; };
+		F4C99AE124A27B7300C7686D /* LoggerInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C99AE024A27B7300C7686D /* LoggerInvoker.swift */; };
+		F4C99AE324A281CE00C7686D /* CommentsAdapterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C99AE224A281CE00C7686D /* CommentsAdapterProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +132,11 @@
 		F42785EF2496399400B35290 /* NewsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModelFactory.swift; sourceTree = "<group>"; };
 		F4507DB0249523E700DABAEA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F4507DB52495357200DABAEA /* CommentsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsAdapter.swift; sourceTree = "<group>"; };
+		F4C99ADA24A2759A00C7686D /* LogAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAction.swift; sourceTree = "<group>"; };
+		F4C99ADC24A2790300C7686D /* LogCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCommand.swift; sourceTree = "<group>"; };
+		F4C99ADE24A27AFB00C7686D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F4C99AE024A27B7300C7686D /* LoggerInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerInvoker.swift; sourceTree = "<group>"; };
+		F4C99AE224A281CE00C7686D /* CommentsAdapterProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsAdapterProxy.swift; sourceTree = "<group>"; };
 		FB03EE607AE3B19FD932EA7A /* Pods_homeWork_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homeWork_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -276,7 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				8483336721B1534000C69640 /* GoogleService-Info.plist */,
-				F4507DB42495354E00DABAEA /* adapter */,
+				F4C99AD924A274BF00C7686D /* command */,
+				F4507DB42495354E00DABAEA /* adapter&proxy */,
 				AA5766E72160AE6C0029F786 /* cells */,
 				AA5766D72160A7060029F786 /* controllers */,
 				AA5766F32160DE980029F786 /* custom */,
@@ -434,12 +445,24 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		F4507DB42495354E00DABAEA /* adapter */ = {
+		F4507DB42495354E00DABAEA /* adapter&proxy */ = {
 			isa = PBXGroup;
 			children = (
 				F4507DB52495357200DABAEA /* CommentsAdapter.swift */,
+				F4C99AE224A281CE00C7686D /* CommentsAdapterProxy.swift */,
 			);
-			path = adapter;
+			path = "adapter&proxy";
+			sourceTree = "<group>";
+		};
+		F4C99AD924A274BF00C7686D /* command */ = {
+			isa = PBXGroup;
+			children = (
+				F4C99ADA24A2759A00C7686D /* LogAction.swift */,
+				F4C99ADC24A2790300C7686D /* LogCommand.swift */,
+				F4C99ADE24A27AFB00C7686D /* Logger.swift */,
+				F4C99AE024A27B7300C7686D /* LoggerInvoker.swift */,
+			);
+			path = command;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,19 +611,24 @@
 				840110E021EC364C0044AEB7 /* TestViewController.swift in Sources */,
 				8424E560217845B700188E61 /* CustomInteractiveTransition.swift in Sources */,
 				AA5766E12160AC5B0029F786 /* FriendsViewController.swift in Sources */,
+				F4C99ADB24A2759A00C7686D /* LogAction.swift in Sources */,
 				AA5766E62160AD8C0029F786 /* Friend.swift in Sources */,
 				84D1DEC521AE926B006FC20E /* CommentTableViewCell.swift in Sources */,
+				F4C99ADF24A27AFB00C7686D /* Logger.swift in Sources */,
 				84D1DEBE21AE745D006FC20E /* NewsInfoTableViewCell.swift in Sources */,
+				F4C99AE124A27B7300C7686D /* LoggerInvoker.swift in Sources */,
 				84105FB3217F173D00EEF673 /* VKApiViewController.swift in Sources */,
 				844ACE372186D98900565895 /* VkGroup.swift in Sources */,
 				AA5766F72160E9080029F786 /* CustomLike.swift in Sources */,
 				AA5766EA2160AE950029F786 /* FriendTableViewCell.swift in Sources */,
 				8424E54921743AA200188E61 /* ImagesViewController.swift in Sources */,
+				F4C99AE324A281CE00C7686D /* CommentsAdapterProxy.swift in Sources */,
 				AA5766C42160A5AD0029F786 /* AppDelegate.swift in Sources */,
 				84D1DEBC21AE624A006FC20E /* NewsInfoViewController.swift in Sources */,
 				8442ABA9219132B7003DDA6A /* AlamofireService.swift in Sources */,
 				84C120962161C5AD0044CBEB /* GroupsViewController.swift in Sources */,
 				AA5766FD2160F0C10029F786 /* NewsViewController.swift in Sources */,
+				F4C99ADD24A2790300C7686D /* LogCommand.swift in Sources */,
 				AA5766E32160AD140029F786 /* Extension.swift in Sources */,
 				8424E55521773EDC00188E61 /* CustomPopAnimator.swift in Sources */,
 				84D1DEC221AE8CFD006FC20E /* VkComment.swift in Sources */,
